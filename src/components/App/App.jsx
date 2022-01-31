@@ -1,0 +1,33 @@
+// import Header from "../Header";
+// import Footer from "../Footer";
+import { lazy, Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
+
+const LayoutPage = lazy(() =>
+  import('../../pages/LayoutPage' /* webpackChunkName: "layout-page" */),
+);
+
+const HomePage = lazy(() =>
+  import('../../pages/HomePage' /* webpackChunkName: "home-page" */),
+);
+
+
+function App() {
+  return (
+    <>
+      <Suspense fallback={<h1>Loading...</h1>}>
+        <Routes>
+          <Route path='/' element={<LayoutPage />}>
+            <Route index element={<HomePage />} />
+          </Route>
+
+          <Route path='*' element={
+            <h1 style={{ textAlign: 'center' }}>Not found!</h1>
+          }></Route>
+        </Routes>
+      </Suspense>
+    </>
+  );
+}
+
+export default App;
