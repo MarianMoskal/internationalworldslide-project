@@ -22,7 +22,8 @@ function App() {
 
           <Route path='*' element={
             <h1 style={{ textAlign: 'center' }}>Not found!</h1>
-          }></Route>
+          }
+          />
         </Routes>
       </Suspense>
     </>
