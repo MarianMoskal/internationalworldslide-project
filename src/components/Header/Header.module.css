@@ -1,7 +1,12 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
   display: flex;
   align-items: center;
-  margin: 5px 0;
+  padding: 5px 30px;
 }
 
 .nav {
@@ -21,6 +26,10 @@
   font-weight: 500;
 }
 
+.link:hover {
+  text-decoration: underline;
+}
+
 .button {
   display: flex;
   align-items: center;
@@ -34,6 +43,21 @@
   border-radius: 10px;
 }
 
+.button:hover {
+  color: var(--main-color);
+  background-color: white;
+}
+
 .image {
+  fill: white;
+  stroke: white;
   margin-right: 8px;
+}
+
+.button:hover .image {
+  filter: invert(54%) sepia(16%) saturate(968%) hue-rotate(233deg)
+    brightness(95%) contrast(84%);
+  fill: black;
+  color: black;
+  stroke: var(--main-color);
 }
