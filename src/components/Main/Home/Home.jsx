@@ -13,9 +13,7 @@ export default function Home() {
         playing={true}
         controls={true}
       />
-      <Container>
-        <h2>Hello world</h2>
-      </Container>
+      <Container>{/* <h2>Hello world</h2> */}</Container>
     </main>
   );
 }
