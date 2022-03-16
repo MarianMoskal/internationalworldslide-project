@@ -1,3 +1,39 @@
-.div {
-  background-color: green;
+.header {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.nav {
+  margin-left: auto;
+}
+
+.list {
+  display: flex;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  height: 45px;
+  padding: 5px;
+  margin-right: 20px;
+  font-weight: 500;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  width: 152px;
+  height: 45px;
+  font-weight: 600;
+  color: white;
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 10px;
+}
+
+.image {
+  margin-right: 8px;
 }

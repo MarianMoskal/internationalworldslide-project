@@ -3,7 +3,11 @@ import s from './Footer.module.css';
 export default function Footer() {
   return (
     <footer className={s.div}>
-      <h3>Footer</h3>
+      <p>&copy;internationalworldslide, 2022</p>
+      <p className={s.text}>
+        The community for cultural relations and educational opportunities of
+        Ukraine and France <br /> Kyiv, Paris
+      </p>
     </footer>
-  )
+  );
 }

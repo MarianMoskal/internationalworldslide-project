@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import s from './App.module.css';
 
 const LayoutPage = lazy(() =>
   import('../../pages/LayoutPage' /* webpackChunkName: "layout-page" */),
@@ -20,7 +21,7 @@ function App() {
 
           <Route
             path="*"
-            element={<h1 style={{ textAlign: 'center' }}>Not found!</h1>}
+            element={<h1 className={s.centered}>Not found!</h1>}
           />
         </Routes>
       </Suspense>
