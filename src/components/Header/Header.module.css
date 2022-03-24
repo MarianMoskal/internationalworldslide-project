@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #fff;
+  background-color: #f8eee7;
   display: flex;
   align-items: center;
   padding: 5px 30px;
@@ -37,7 +37,7 @@
   width: 152px;
   height: 45px;
   font-weight: 600;
-  color: white;
+  color: #f8eee7;
   background-color: var(--main-color);
   border: none;
   border-radius: 10px;
@@ -45,19 +45,17 @@
 
 .button:hover {
   color: var(--main-color);
-  background-color: white;
+  background-color: var(--background-light-color);
 }
 
 .image {
-  fill: white;
-  stroke: white;
+  fill: #f8eee7;
+  stroke: #f8eee7;
   margin-right: 8px;
 }
 
 .button:hover .image {
-  filter: invert(54%) sepia(16%) saturate(968%) hue-rotate(233deg)
-    brightness(95%) contrast(84%);
-  fill: black;
-  color: black;
+  filter: invert(44%) sepia(7%) saturate(2540%) hue-rotate(256deg)
+    brightness(95%) contrast(81%);
   stroke: var(--main-color);
 }

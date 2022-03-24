@@ -1,6 +1,8 @@
 import Container from 'components/Main/Container/Container';
 import s from './Home.module.css';
 import ReactPlayer from 'react-player';
+import ServicesRange from './ServicesRange';
+// import Languages from './Languages';
 
 export default function Home() {
   return (
@@ -13,7 +15,10 @@ export default function Home() {
         playing={true}
         controls={true}
       />
-      <Container>{/* <h2>Hello world</h2> */}</Container>
+      <Container>
+        <ServicesRange />
+        {/* <Languages /> */}
+      </Container>
     </main>
   );
 }

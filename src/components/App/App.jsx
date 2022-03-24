@@ -21,7 +21,7 @@ function App() {
 
           <Route
             path="*"
-            element={<h1 className={s.centered}>Not found!</h1>}
+            element={<h1 className={s.centered}>Page not found!</h1>}
           />
         </Routes>
       </Suspense>

@@ -1,0 +1,51 @@
+// import s from './Languages.module.css';
+
+export default function Languages() {
+  return (
+    <section>
+      <h2>Языки</h2>
+      <ul>
+        <li>ДАТСКИЙ</li>
+        <li>ФРАНЦУЗСЬКИЙ</li>
+        <li>НЕМЕЦКИЙ</li>
+        <li>ИТАЛЬЯНСКИЙ</li>
+        <li>ИСПАНСКИЙ</li>
+        <li>ЛАТИШСКИЙ</li>
+        <li>ЛИТОВСКИЙ</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </section>
+  );
+}
