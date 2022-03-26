@@ -8,12 +8,21 @@ export default function Home() {
   return (
     <main className={s.div}>
       <ReactPlayer
-        url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
-        width="100%"
+        url="https://vimeo.com/692650084"
+        width="100vw"
         height="700px"
-        muted={true}
+        muted={false}
         playing={true}
         controls={true}
+        config={{
+          vimeo: {
+            playerOptions: {
+              // autoplay: true,
+              // responsive: true,
+              //   controls: true,
+            },
+          },
+        }}
       />
       <Container>
         <ServicesRange />
