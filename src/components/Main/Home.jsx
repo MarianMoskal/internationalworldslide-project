@@ -11,7 +11,7 @@ export default function Home() {
         url="https://vimeo.com/692650084"
         width="100vw"
         height="700px"
-        muted={false}
+        muted={true}
         playing={true}
         controls={true}
         config={{
