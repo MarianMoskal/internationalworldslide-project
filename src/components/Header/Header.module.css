@@ -23,7 +23,8 @@
   height: 45px;
   padding: 5px;
   margin-right: 20px;
-  font-weight: 500;
+  font-size: larger;
+  font-weight: 700;
 }
 
 .link:hover {
@@ -36,7 +37,8 @@
   padding: 12px;
   width: 152px;
   height: 45px;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: medium;
   color: #f8eee7;
   background-color: var(--main-color);
   border: none;
@@ -51,7 +53,8 @@
 .image {
   fill: var(--background-light-color);
   stroke: var(--background-light-color);
-  margin-right: 8px;
+  margin-bottom: 2px;
+  margin-right: 6px;
 }
 
 .button:hover .image {

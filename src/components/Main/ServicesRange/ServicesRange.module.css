@@ -51,7 +51,7 @@
 
 .list {
   margin-top: 10px;
-  font-size: large;
+  font-size: larger;
   font-weight: bold;
   color: var(--main-dark-color);
 }
