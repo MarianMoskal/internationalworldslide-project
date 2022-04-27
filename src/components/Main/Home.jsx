@@ -2,7 +2,7 @@ import Container from 'components/Main/Container/Container';
 import s from './Home.module.css';
 import ReactPlayer from 'react-player';
 import ServicesRange from './ServicesRange';
-// import Languages from './Languages';
+import Languages from './Languages';
 
 export default function Home() {
   return (
@@ -26,7 +26,7 @@ export default function Home() {
       />
       <Container>
         <ServicesRange />
-        {/* <Languages /> */}
+        <Languages />
       </Container>
     </main>
   );

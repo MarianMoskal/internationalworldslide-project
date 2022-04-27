@@ -1,51 +1,22 @@
-// import s from './Languages.module.css';
+import s from './Languages.module.css';
+import { languages } from 'db/languages';
 
 export default function Languages() {
   return (
-    <section>
-      <h2>Языки</h2>
-      <ul>
-        <li>ДАТСКИЙ</li>
-        <li>ФРАНЦУЗСЬКИЙ</li>
-        <li>НЕМЕЦКИЙ</li>
-        <li>ИТАЛЬЯНСКИЙ</li>
-        <li>ИСПАНСКИЙ</li>
-        <li>ЛАТИШСКИЙ</li>
-        <li>ЛИТОВСКИЙ</li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+    <section className={s.section}>
+      <h2 className={s.heading}>Языки</h2>
+      <div className={s.wrapper}>
+        <ul className={s.list}>
+          {languages.map(el => (
+            <li className={s.item} key={el.title}>
+              <div className={s.imageWrapper}>
+                <img src={el.picture} alt={el.title} width="60" height="45" />
+              </div>
+              <p className={s.itemTitle}>{el.title}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 }
