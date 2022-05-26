@@ -6,7 +6,7 @@ export default function Footer() {
       <p>&copy;internationalworldslide, 2022</p>
       <p className={s.text}>
         The community for cultural relations and educational opportunities of
-        Ukraine and France <br /> Kyiv, Paris
+        Ukraine and France <br /> &#x1F499; Kyiv, Paris &#x1F49B;
       </p>
     </footer>
   );

@@ -3,7 +3,7 @@ import { languages } from 'db/languages';
 
 export default function Languages() {
   return (
-    <section className={s.section}>
+    <section id="languages" className={s.section}>
       <h2 className={s.heading}>Языки</h2>
       <div className={s.wrapper}>
         <ul className={s.list}>

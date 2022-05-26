@@ -45,6 +45,10 @@ import viet from '../images/langs/vn.svg';
 import arm from '../images/langs/am.svg';
 import ge from '../images/langs/ge.svg';
 import mong from '../images/langs/mn.svg';
+import indi from '../images/langs/in.svg';
+import kaz from '../images/langs/kz.svg';
+import alb from '../images/langs/al.svg';
+import az from '../images/langs/az.svg';
 
 export const languages = [
   { title: 'ДАТСКИЙ', picture: dat },
@@ -94,6 +98,10 @@ export const languages = [
   { title: 'АРМЯНСКИЙ', picture: arm },
   { title: 'ГРУЗИНСКИЙ', picture: ge },
   { title: 'МОНГОЛЬСКИЙ', picture: mong },
+  { title: 'ХИНДИ', picture: indi },
+  { title: 'КАЗАХСКИЙ', picture: kaz },
+  { title: 'АЛБАНСКИЙ', picture: alb },
+  { title: 'АЗЕЙБАРДЖАНСКИЙ', picture: az },
 ];
 
 // шотландский, валлийский, белорусский

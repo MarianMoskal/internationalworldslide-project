@@ -1,11 +1,11 @@
 .section {
-  margin: 50px 0;
+  padding-top: 70px;
 }
 
 .heading {
   text-align: center;
   font-size: xx-large;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .container {

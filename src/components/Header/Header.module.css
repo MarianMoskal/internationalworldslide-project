@@ -7,6 +7,7 @@
   display: flex;
   align-items: center;
   padding: 5px 30px;
+  z-index: 99999;
 }
 
 .nav {
@@ -34,6 +35,7 @@
 .button {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 12px;
   width: 152px;
   height: 45px;
@@ -46,19 +48,21 @@
 }
 
 .button:hover {
+  font-size: large;
+  text-decoration: underline;
   color: var(--main-color);
   background-color: var(--background-light-color);
 }
 
-.image {
+/* .image {
   fill: var(--background-light-color);
   stroke: var(--background-light-color);
   margin-bottom: 2px;
   margin-right: 6px;
-}
+} */
 
-.button:hover .image {
+/* .button:hover .image {
   filter: invert(44%) sepia(7%) saturate(2540%) hue-rotate(256deg)
     brightness(95%) contrast(81%);
   stroke: var(--main-color);
-}
+} */

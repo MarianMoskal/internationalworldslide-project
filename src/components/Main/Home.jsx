@@ -3,23 +3,47 @@ import s from './Home.module.css';
 import ReactPlayer from 'react-player';
 import ServicesRange from './ServicesRange';
 import Languages from './Languages';
+import { useState } from 'react';
 
 export default function Home() {
+  const [visibleStyle, setVisibleStyle] = useState('none');
+
+  const handlePauseEnd = () => {
+    setVisibleStyle('block');
+  };
+
+  const handlePlay = () => {
+    setVisibleStyle('none');
+  };
+
   return (
     <main className={s.div}>
-      <ReactPlayer
-        url="https://vimeo.com/692650084"
-        width="100vw"
-        height="700px"
-        muted={true}
-        playing={true}
-        controls={true}
-        config={{
-          vimeo: {
-            playerOptions: {},
-          },
-        }}
-      />
+      <div className={s.playerWrapper}>
+        <ReactPlayer
+          className={s.reactPlayer}
+          url="https://vimeo.com/692650084"
+          width="100%"
+          height="700px"
+          muted={true}
+          playing={true}
+          controls={true}
+          onEnded={handlePauseEnd}
+          onPlay={handlePlay}
+          onPause={handlePauseEnd}
+          config={{
+            vimeo: {
+              playerOptions: {},
+            },
+          }}
+        />
+        <button
+          style={{ display: visibleStyle }}
+          className={s.heroButton}
+          type="button"
+        >
+          Узнать цену
+        </button>
+      </div>
       <Container>
         <ServicesRange />
         <Languages />
