@@ -17,7 +17,7 @@ import nor from '../images/langs/no.svg';
 import far from '../images/langs/fo.svg';
 import ice from '../images/langs/is.svg';
 import fin from '../images/langs/fi.svg';
-import est from '../images/langs/es.svg';
+import est from '../images/langs/ee.svg';
 import hun from '../images/langs/hu.svg';
 import is from '../images/langs/il.svg';
 import gr from '../images/langs/gr.svg';
@@ -48,11 +48,11 @@ import mong from '../images/langs/mn.svg';
 
 export const languages = [
   { title: 'ДАТСКИЙ', picture: dat },
-  { title: 'ФРАНЦУЗСЬКИЙ', picture: fr },
+  { title: 'ФРАНЦУЗСКИЙ', picture: fr },
   { title: 'НЕМЕЦКИЙ', picture: de },
   { title: 'ИТАЛЬЯНСКИЙ', picture: it },
   { title: 'ИСПАНСКИЙ', picture: sp },
-  { title: 'ЛАТИШСКИЙ', picture: lat },
+  { title: 'ЛАТЫШСКИЙ', picture: lat },
   { title: 'ЛИТОВСКИЙ', picture: lit },
   { title: 'АНГЛИЙСКИЙ', picture: en },
   { title: 'НИДЕРЛАНДСКИЙ', picture: neth },
@@ -66,7 +66,7 @@ export const languages = [
   { title: 'ФАРЕРСКИЙ', picture: far },
   { title: 'ИСЛАНДСКИЙ', picture: ice },
   { title: 'ФИНСКИЙ', picture: fin },
-  { title: 'ЕСТОНСКИЙ', picture: est },
+  { title: 'ЭСТОНСКИЙ', picture: est },
   { title: 'ВЕНГЕРСКИЙ', picture: hun },
   { title: 'ИВРИТ', picture: is },
   { title: 'ГРЕЧЕСКИЙ', picture: gr },
