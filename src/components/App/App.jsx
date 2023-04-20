@@ -13,7 +13,7 @@ const HomePage = lazy(() =>
 function App() {
   return (
     <>
-      <Suspense fallback={<h1>Loading...</h1>}>
+      <Suspense fallback={<h1 className={s.centered}>Loading...</h1>}>
         <Routes>
           <Route path="/" element={<LayoutPage />}>
             <Route index element={<HomePage />} />
