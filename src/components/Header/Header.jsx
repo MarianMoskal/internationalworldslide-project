@@ -1,6 +1,7 @@
 import Container from 'components/Main/Container';
 import logo from 'images/logo.svg';
 import s from './Header.module.css';
+import menu from 'images/menu.svg';
 // import phone from 'images/phone.svg';
 
 export default function Header() {
@@ -17,8 +18,11 @@ export default function Header() {
     <Container>
       <header className={s.header}>
         <a href="/">
-          <img src={logo} alt="logo" />
+          <img className={s.logo} src={logo} alt="logo" />
         </a>
+        <button className={s.burgerButton} type="button">
+          <img src={menu} alt="menu" width={40} />
+        </button>
         <nav className={s.nav}>
           <ul className={s.list}>
             <li>

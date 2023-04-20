@@ -13,7 +13,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  /* align-items: center; */
+  /* align-items: stretch; */
 }
 
 .paragraf {
@@ -23,4 +23,13 @@
 
 .link {
   color: var(--main-color);
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: red;
+}
+
+.review {
+  height: 365px;
 }
