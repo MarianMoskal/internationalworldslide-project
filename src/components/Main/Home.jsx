@@ -5,6 +5,7 @@ import ServicesRange from './ServicesRange';
 import Languages from './Languages';
 import { useState } from 'react';
 import Reviews from './Reviews/Reviews';
+import { Contacts } from './Contacts';
 
 export default function Home() {
   const [visibleStyle, setVisibleStyle] = useState('none');
@@ -49,6 +50,7 @@ export default function Home() {
         <ServicesRange />
         <Languages />
         <Reviews />
+        <Contacts />
       </Container>
     </main>
   );
