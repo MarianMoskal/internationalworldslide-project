@@ -10,10 +10,10 @@
 }
 
 .container {
-  width: 75%;
+  width: 65%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-right: auto;
   margin-left: auto;
 }

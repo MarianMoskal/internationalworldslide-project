@@ -1,0 +1,34 @@
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 45%;
+  height: 400px;
+  padding: 15px;
+  background-color: blueviolet;
+}
+
+.mobNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px;
+}
+
+.mobList {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 50px;
+}
+
+.closeButton {
+  background-color: inherit;
+  border: none;
+  padding: 10px;
+}

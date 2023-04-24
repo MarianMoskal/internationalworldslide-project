@@ -25,3 +25,7 @@
   letter-spacing: 3px;
   cursor: pointer;
 }
+
+.link {
+  color: inherit;
+}
