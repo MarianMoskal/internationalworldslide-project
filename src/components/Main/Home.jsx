@@ -24,6 +24,8 @@ export default function Home() {
         <ReactPlayer
           className={s.reactPlayer}
           url="https://vimeo.com/692650084"
+          // allow="autoplay; fullscreen"
+          // allowFullScreen={true}
           width="100%"
           height="700px"
           muted={true}
@@ -43,7 +45,15 @@ export default function Home() {
           className={s.heroButton}
           type="button"
         >
-          Узнать цену
+          <a
+            className={s.link}
+            href="https://m.me/internationalworldslideiws"
+            target="blank"
+            noreffer="noopener"
+          >
+            {' '}
+            Узнать цену
+          </a>
         </button>
       </div>
       <Container>
