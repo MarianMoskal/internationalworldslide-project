@@ -19,6 +19,7 @@
 
 .nav {
   margin-left: auto;
+
   @media (max-width: 839px) {
     display: none;
   }
@@ -47,15 +48,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   padding: 12px;
   width: 152px;
   height: 45px;
+
   font-weight: 700;
   font-size: medium;
   color: #f8eee7;
   background-color: var(--main-color);
   border: none;
   border-radius: 10px;
+
   @media (max-width: 839px) {
     display: none;
   }
@@ -69,26 +73,11 @@
   transform: scale(1.2);
 }
 
-.logo:hover {
-  transform: scale(1.2);
-}
-
 .burgerButton {
+  margin: 7px;
+
   @media (min-width: 840px) {
     margin-left: auto;
     display: none;
   }
 }
-
-/* .image {
-  fill: var(--background-light-color);
-  stroke: var(--background-light-color);
-  margin-bottom: 2px;
-  margin-right: 6px;
-} */
-
-/* .button:hover .image {
-  filter: invert(44%) sepia(7%) saturate(2540%) hue-rotate(256deg)
-    brightness(95%) contrast(81%);
-  stroke: var(--main-color);
-} */

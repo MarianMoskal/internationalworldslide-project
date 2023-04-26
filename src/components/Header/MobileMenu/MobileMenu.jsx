@@ -7,8 +7,10 @@ export default function MobileMenu({
   showMobileMenu,
   setShowMobileMenu,
 }) {
-  const [mobileMenuVisibility, setMobileMenuVisibility] = useState('none');
+  const [mobileMenuVisibility, setMobileMenuVisibility] = useState();
   const refOne = useRef(null);
+
+  console.log(showMobileMenu);
 
   const handleCloseMobileMenu = e => {
     if (showMobileMenu) {
@@ -24,25 +26,21 @@ export default function MobileMenu({
   }, [showMobileMenu]);
 
   const handleClickOutside = e => {
-    if (!refOne.current.contains(e.target)) {
-      setMobileMenuVisibility('none');
+    if (!refOne.current.contains(e.target) || e.target.localName === 'a') {
+      setMobileMenuVisibility(' ');
     }
   };
 
   useEffect(() => {
     if (showMobileMenu) {
-      setMobileMenuVisibility('block');
+      setMobileMenuVisibility(s.showMenu);
     } else {
-      setMobileMenuVisibility('none');
+      setMobileMenuVisibility(' ');
     }
   }, [showMobileMenu]);
 
   return (
-    <div
-      ref={refOne}
-      className={s.container}
-      style={{ display: mobileMenuVisibility }}
-    >
+    <div ref={refOne} className={s.container + ' ' + mobileMenuVisibility}>
       <nav className={s.mobNav}>
         <button
           onClick={handleCloseMobileMenu}
