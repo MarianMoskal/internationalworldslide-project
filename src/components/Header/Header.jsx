@@ -26,7 +26,6 @@ export default function Header() {
   }, []);
 
   const handleClick = e => {
-    console.log(e);
     e.preventDefault();
 
     const anchor = e.target.getAttribute('href');
@@ -40,9 +39,9 @@ export default function Header() {
   return (
     <Container>
       <header className={s.header}>
-        <a href="/">
-          <img className={s.logo} src={logo} alt="logo" />
-        </a>
+        {/* <a href="#"> */}
+        <img className={s.logo} src={logo} alt="logo" />
+        {/* </a> */}
         {displayStyle === 'desktop' && (
           <>
             <nav className={s.nav}>

@@ -17,11 +17,14 @@
 }
 
 .wrapper {
-  background-color: var(--background-color);
-  border-radius: 25px;
+  background-color: rgb(246, 129, 90);
   width: 540px;
-  height: 221px;
+  height: 231px;
   padding: 20px 30px;
+  border: 4px solid var(--main-dark-color);
+  border-top-right-radius: 30px;
+  border-top-left-radius: 70px;
+  border-bottom-right-radius: 100px;
 }
 
 @media (max-width: 520px) {
@@ -39,21 +42,20 @@
 
 @media (min-width: 1700px) {
   .wrapper {
-    width: 700px;
+    width: 600px;
   }
 }
 
 .title {
   text-align: center;
   text-decoration: underline;
-  color: var(--main-dark-color);
+  font-size: larger;
 }
 
 .list {
-  margin-top: 10px;
-  font-size: larger;
-  font-weight: bold;
-  color: var(--main-dark-color);
+  margin-top: 15px;
+  font-size: 124%;
+  color: white;
 }
 
 .item {
