@@ -5,7 +5,7 @@ import ServicesRange from './ServicesRange';
 import Languages from './Languages';
 import { useState } from 'react';
 import Reviews from './Reviews/Reviews';
-import { Contacts } from './Contacts';
+import Contacts from './Contacts/Contacts';
 
 export default function Home() {
   const [visibleStyle, setVisibleStyle] = useState('none');

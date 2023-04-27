@@ -10,8 +10,6 @@ export default function MobileMenu({
   const [mobileMenuVisibility, setMobileMenuVisibility] = useState();
   const refOne = useRef(null);
 
-  console.log(showMobileMenu);
-
   const handleCloseMobileMenu = e => {
     if (showMobileMenu) {
       setShowMobileMenu(!showMobileMenu);

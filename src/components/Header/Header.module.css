@@ -4,6 +4,7 @@
   left: 0;
   width: 100%;
   background-color: var(--background-light-color);
+
   display: flex;
   align-items: center;
   padding: 5px 30px;
