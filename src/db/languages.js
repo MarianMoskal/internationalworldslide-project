@@ -100,8 +100,8 @@ export const languages = [
   { title: 'МОНГОЛЬСКИЙ', picture: mong },
   { title: 'ХИНДИ', picture: indi },
   { title: 'КАЗАХСКИЙ', picture: kaz },
-  { title: 'АЛБАНСКИЙ', picture: alb },
   { title: 'АЗЕЙБАРДЖАНСКИЙ', picture: az },
+  { title: 'АЛБАНСКИЙ', picture: alb },
 ];
 
 // шотландский, валлийский, белорусский

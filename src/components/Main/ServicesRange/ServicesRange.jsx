@@ -1,9 +1,12 @@
+import { Trans } from 'react-i18next';
 import s from './ServicesRange.module.css';
 
 export default function ServicesRange() {
   return (
     <section className={s.section} id="services">
-      <h2 className={s.heading}>Спектр услуг</h2>
+      <h2 className={s.heading}>
+        <Trans i18nKey="services"></Trans>
+      </h2>
       <div className={s.container}>
         <div className={s.wrapper}>
           <h3 className={s.title}>ЯЗЫКИ</h3>

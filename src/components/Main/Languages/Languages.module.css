@@ -4,14 +4,23 @@
 }
 
 .heading {
-  margin-bottom: 40px;
+  padding-bottom: 40px;
   text-align: center;
   font-size: xx-large;
+  background-color: rgba(201, 244, 229, 0.5);
+  /* background-color: rgba(127, 255, 212, .5); */
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
 }
 
 .wrapper {
   margin-left: auto;
   margin-right: auto;
+
+  background-color: rgba(201, 244, 229, 0.5);
+
+  border-bottom-left-radius: 150px;
+  border-bottom-right-radius: 150px;
 }
 
 .list {
@@ -35,4 +44,5 @@
   text-align: center;
   font-size: medium;
   font-weight: 600;
+  color: black;
 }

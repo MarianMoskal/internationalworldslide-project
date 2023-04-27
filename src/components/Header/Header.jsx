@@ -4,7 +4,8 @@ import s from './Header.module.css';
 import menu from 'images/menu.svg';
 import { useEffect, useState } from 'react';
 import MobileMenu from './MobileMenu/MobileMenu';
-// import phone from 'images/phone.svg';
+import { Trans, useTranslation } from 'react-i18next';
+// import { changeLanguage } from 'i18next';
 
 function getWindowWidth() {
   const { innerWidth: width } = window;
@@ -14,9 +15,31 @@ function getWindowWidth() {
   };
 }
 
+const languages = [
+  {
+    label: 'UA',
+    value: 'ua',
+  },
+  {
+    label: 'EN',
+    value: 'en',
+  },
+  {
+    label: 'ru',
+    value: 'ru',
+  },
+];
+
 export default function Header() {
   const [displayStyle, setDisplayStyle] = useState('');
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [language, setLanguage] = useState('ua');
+
+  const { i18n } = useTranslation();
+  const changeLanguage = lng => {
+    console.log(lng);
+    i18n.changeLanguage(lng);
+  };
 
   useEffect(() => {
     const width = getWindowWidth().width;
@@ -34,36 +57,38 @@ export default function Header() {
     el.scrollIntoView({ behavior: 'smooth' });
   };
 
-  // console.log(displayStyle === 'none' ? 'block' : 'none');
+  const handleSelect = e => {
+    console.log(e.target.value);
+    setLanguage(e.target.value);
+    changeLanguage(e.target.value);
+  };
 
   return (
     <Container>
       <header className={s.header}>
-        {/* <a href="#"> */}
         <img className={s.logo} src={logo} alt="logo" />
-        {/* </a> */}
         {displayStyle === 'desktop' && (
           <>
             <nav className={s.nav}>
               <ul className={s.list}>
                 <li>
                   <a onClick={handleClick} className={s.link} href="services">
-                    Услуги
+                    <Trans i18nKey="services"></Trans>
                   </a>
                 </li>
                 <li>
                   <a onClick={handleClick} className={s.link} href="languages">
-                    Языки
+                    <Trans i18nKey="languages"></Trans>
                   </a>
                 </li>
                 <li>
                   <a onClick={handleClick} className={s.link} href="reviews">
-                    Отзывы
+                    <Trans i18nKey="reviews"></Trans>
                   </a>
                 </li>
                 <li>
                   <a onClick={handleClick} className={s.link} href="contacts">
-                    Контакты
+                    <Trans i18nKey="contacts"></Trans>
                   </a>
                 </li>
               </ul>
@@ -74,9 +99,20 @@ export default function Header() {
               target="blank"
               noreffer="noopener"
             >
-              {/* <img className={s.image} src={phone} alt="phone" /> */}
-              Узнать цену
+              <Trans i18nKey="message"></Trans>
             </a>
+            <select
+              className={s.languages}
+              name="langs"
+              value={language}
+              onChange={handleSelect}
+            >
+              {languages.map(({ value, label }) => (
+                <option className={s.option} key={label} value={value}>
+                  {label}
+                </option>
+              ))}
+            </select>
           </>
         )}
         {displayStyle !== 'desktop' && (
