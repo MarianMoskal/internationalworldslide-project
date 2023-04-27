@@ -1,0 +1,11 @@
+.backgroundVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  object-fit: cover;
+  height: 100vh;
+  width: 100vw;
+  padding: none;
+  z-index: -1;
+}
