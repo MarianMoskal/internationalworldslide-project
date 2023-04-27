@@ -17,11 +17,11 @@
 }
 
 .wrapper {
-  background-color: rgb(246, 129, 90);
+  background-color: var(--pink-color);
   width: 540px;
   height: 231px;
   padding: 20px 30px;
-  border: 4px solid var(--main-dark-color);
+  border: 4px solid var(--green-color);
   border-top-right-radius: 30px;
   border-top-left-radius: 70px;
   border-bottom-right-radius: 100px;
@@ -55,7 +55,7 @@
 .list {
   margin-top: 15px;
   font-size: 124%;
-  color: white;
+  font-style: italic;
 }
 
 .item {

@@ -3,7 +3,10 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--background-light-color);
+
+  background-color: var(--main-color);
+  /* background-color: aquamarine; */
+  /* background-color: var(--background-light-color); */
 
   display: flex;
   align-items: center;
@@ -56,8 +59,8 @@
 
   font-weight: 700;
   font-size: medium;
-  color: #f8eee7;
-  background-color: var(--main-color);
+  color: black;
+  background-color: var(--violet-color);
   border: none;
   border-radius: 10px;
 
@@ -67,11 +70,11 @@
 }
 
 .button:hover {
-  font-size: large;
+  font-size: medium;
   text-decoration: underline;
-  color: var(--main-color);
-  background-color: var(--background-light-color);
-  transform: scale(1.2);
+  /* color: var(--main-color); */
+  background-color: var(--pink-color);
+  transform: scale(1.1);
 }
 
 .burgerButton {
@@ -81,4 +84,23 @@
     margin-left: auto;
     display: none;
   }
+}
+
+.languages {
+  transform: translateX(20px);
+  padding: 5px;
+  border: 2px solid var(--pink-color);
+  border-radius: 45%;
+  background-color: inherit;
+  font-size: large;
+  font-weight: bold;
+}
+
+.languages:focus {
+  outline-color: blue;
+  cursor: pointer;
+}
+
+.option {
+  color: black;
 }
