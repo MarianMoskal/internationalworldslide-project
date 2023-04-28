@@ -3,12 +3,21 @@ import s from './Home.module.css';
 import ReactPlayer from 'react-player';
 import ServicesRange from './ServicesRange';
 import Languages from './Languages';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Reviews from './Reviews/Reviews';
 import Contacts from './Contacts/Contacts';
 
 export default function Home() {
   const [visibleStyle, setVisibleStyle] = useState('none');
+  const [playerHeight, setPlayerHeight] = useState('500px');
+
+  useEffect(() => {
+    if (window.innerHeight) {
+      const windowHeight = window.innerHeight;
+
+      setPlayerHeight(`${windowHeight - 150}px`);
+    }
+  }, []);
 
   const handlePauseEnd = () => {
     setVisibleStyle('block');
@@ -28,7 +37,7 @@ export default function Home() {
           // allowFullScreen={true}
           playsinline
           width="100%"
-          height="700px"
+          height={playerHeight}
           muted={true}
           playing={true}
           controls={true}
