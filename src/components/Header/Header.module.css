@@ -5,28 +5,15 @@
   width: 100%;
 
   background-color: var(--main-color);
-  /* background-color: aquamarine; */
-  /* background-color: var(--background-light-color); */
 
   display: flex;
   align-items: center;
   padding: 5px 30px;
-  z-index: 99999;
-}
-
-@media (max-width: 839px) {
-  .header {
-    justify-content: space-between;
-    padding: 5px 15px;
-  }
+  z-index: 1;
 }
 
 .nav {
   margin-left: auto;
-
-  @media (max-width: 839px) {
-    display: none;
-  }
 }
 
 .list {
@@ -41,6 +28,10 @@
   margin-right: 20px;
   font-size: larger;
   font-weight: 700;
+
+  @media (min-width: 839px) and (max-width: 900px) {
+    margin-right: 10px;
+  }
 }
 
 .link:hover {
@@ -50,30 +41,40 @@
 
 .button {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
 
   padding: 12px;
-  width: 152px;
+  min-width: 144px;
   height: 45px;
 
   font-weight: 700;
   font-size: medium;
-  color: black;
-  background-color: var(--violet-color);
+  color: var(--secondary-text-color);
+  background-color: var(--pink-color);
   border: none;
   border-radius: 10px;
+}
 
-  @media (max-width: 839px) {
+@media (max-width: 839px) {
+  .nav,
+  .link,
+  .button,
+  .languages {
     display: none;
+  }
+
+  .header {
+    justify-content: space-between;
+    padding: 5px 15px;
   }
 }
 
 .button:hover {
   font-size: medium;
   text-decoration: underline;
-  /* color: var(--main-color); */
-  background-color: var(--pink-color);
+  background-color: var(--violet-color);
   transform: scale(1.1);
 }
 
@@ -89,18 +90,19 @@
 .languages {
   transform: translateX(20px);
   padding: 5px;
-  border: 2px solid var(--pink-color);
+  border: 1px dashed var(--secondary-text-color);
   border-radius: 45%;
   background-color: inherit;
   font-size: large;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .languages:focus {
-  outline-color: blue;
+  outline-color: var(--secondary-text-color);
   cursor: pointer;
 }
 
 .option {
-  color: black;
+  color: var(--main-text-color);
 }

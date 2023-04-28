@@ -63,6 +63,21 @@ export default function Header() {
     changeLanguage(e.target.value);
   };
 
+  const languageSelect = (selectClassName, optionClassName) => (
+    <select
+      className={selectClassName}
+      name="langs"
+      value={language}
+      onChange={handleSelect}
+    >
+      {languages.map(({ value, label }) => (
+        <option className={optionClassName} key={label} value={value}>
+          {label}
+        </option>
+      ))}
+    </select>
+  );
+
   return (
     <Container>
       <header className={s.header}>
@@ -101,18 +116,7 @@ export default function Header() {
             >
               <Trans i18nKey="message"></Trans>
             </a>
-            <select
-              className={s.languages}
-              name="langs"
-              value={language}
-              onChange={handleSelect}
-            >
-              {languages.map(({ value, label }) => (
-                <option className={s.option} key={label} value={value}>
-                  {label}
-                </option>
-              ))}
-            </select>
+            {languageSelect(s.languages, s.option)}
           </>
         )}
         {displayStyle !== 'desktop' && (
@@ -127,6 +131,7 @@ export default function Header() {
             <MobileMenu
               handleClick={handleClick}
               showMobileMenu={showMobileMenu}
+              languageSelect={languageSelect}
               setShowMobileMenu={setShowMobileMenu}
             />
           </>

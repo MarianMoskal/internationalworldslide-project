@@ -1,9 +1,18 @@
 .section {
-  padding-top: 70px;
-  margin-bottom: 30px;
+  padding-top: var(--section-top-padding);
+}
+
+.wrapper {
+  background-color: var(--main-semi-transparent);
+  border-radius: 150px 150px 100px 100px;
+  padding-bottom: 30px;
+  @media (max-width: 744px) {
+    border-radius: 50px;
+  }
 }
 
 .heading {
+  padding-top: 10px;
   margin-bottom: 40px;
   text-align: center;
   font-size: xx-large;
@@ -21,7 +30,7 @@
 }
 
 .link {
-  color: var(--violet-color);
+  color: var(--secondary-text-color);
   text-decoration: underline;
 }
 
