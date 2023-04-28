@@ -24,8 +24,9 @@ export default function Home() {
         <ReactPlayer
           className={s.reactPlayer}
           url="https://vimeo.com/692650084"
-          // allow="autoplay; fullscreen"
+          // allow="autoplay"
           // allowFullScreen={true}
+          playsinline
           width="100%"
           height="700px"
           muted={true}
