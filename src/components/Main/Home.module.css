@@ -12,7 +12,7 @@
   height: 70px;
   font-weight: 700;
   font-size: x-large;
-  background-color: var(--violet-color);
+  background-color: var(--pink-color);
   border: none;
   border-radius: 10px;
 }
@@ -23,9 +23,9 @@
     -webkit-transform 150ms ease-out;
   letter-spacing: 3px;
   cursor: pointer;
-  background-color: var(--pink-color);
+  background-color: var(--violet-color);
 }
 
 .link {
-  color: inherit;
+  color: var(--secondary-text-color);
 }

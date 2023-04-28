@@ -5,6 +5,7 @@ import close from '../../../images/close.svg';
 export default function MobileMenu({
   handleClick,
   showMobileMenu,
+  languageSelect,
   setShowMobileMenu,
 }) {
   const [mobileMenuVisibility, setMobileMenuVisibility] = useState();
@@ -40,13 +41,17 @@ export default function MobileMenu({
   return (
     <div ref={refOne} className={s.container + ' ' + mobileMenuVisibility}>
       <nav className={s.mobNav}>
-        <button
-          onClick={handleCloseMobileMenu}
-          className={s.closeButton}
-          type="button"
-        >
-          <img src={close} alt="close" />
-        </button>
+        <div className={s.wrapper}>
+          <button
+            onClick={handleCloseMobileMenu}
+            className={s.closeButton}
+            type="button"
+          >
+            <img src={close} alt="close" />
+          </button>
+          {languageSelect(s.languages, s.option)}
+        </div>
+
         <ul className={s.mobList}>
           <li>
             <a onClick={handleClick} className={s.mobLink} href="services">

@@ -3,18 +3,34 @@
   top: 0;
   right: 0;
 
-  width: 45%;
+  width: 35%;
   height: 400px;
   padding: 10px;
 
-  background-color: var(--main-color);
-  color: rgb(245, 245, 245);
-  border-left: 5px solid greenyellow;
-  border-bottom: 5px solid greenyellow;
+  background-color: var(--violet-color);
+  border-left: 5px solid var(--main-color);
+  border-bottom: 5px solid var(--main-color);
   border-bottom-left-radius: 20px;
 
   transform: translateX(100%);
   transition: transform 350ms ease-out;
+
+  @media (min-width: 350px) and (max-width: 600px) {
+    width: 45%;
+  }
+}
+
+@media (max-width: 350px) {
+  .container {
+    width: 60%;
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 10px;
 }
 
 .showMenu {
@@ -39,21 +55,18 @@
 }
 
 .mobLink {
-  color: whitesmoke;
+  color: var(--secondary-text-color);
   text-decoration: underline;
-  text-decoration-color: greenyellow;
+  text-decoration-color: var(--secondary-text-color);
 }
 
 .closeButton {
   width: 40px;
   padding: 10px;
-  margin-bottom: 10px;
 
   background-color: inherit;
-  border: 1px dashed red;
+  border: 1px solid var(--secondary-text-color);
   border-radius: 50%;
-  filter: invert(100%) sepia(58%) saturate(658%) hue-rotate(200deg)
-    brightness(113%) contrast(92%);
 }
 
 .button {
@@ -61,8 +74,36 @@
   margin-top: 25px;
   padding: 5px;
 
-  color: whitesmoke;
-  background-color: rgb(246, 129, 90);
+  color: var(--secondary-text-color);
+  background-color: var(--main-color);
   text-align: center;
   border-radius: 5px;
+}
+
+.languages {
+  margin-right: 10px;
+  padding: 5px;
+
+  border: 1px dashed var(--secondary-text-color);
+  border-radius: 45%;
+
+  background-color: var(--main-color);
+  color: var(--secondary-text-color);
+
+  font-size: large;
+  font-weight: bold;
+}
+
+.languages:focus {
+  outline-color: var(--secondary-text-color);
+  cursor: pointer;
+}
+
+.option {
+  color: var(--main-text-color);
+  background-color: var(--main-color);
+}
+
+.option:not(:checked) {
+  background-color: var(--main-color);
 }
