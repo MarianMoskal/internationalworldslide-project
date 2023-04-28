@@ -95,6 +95,7 @@
   background-color: inherit;
   font-size: large;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .languages:focus {
