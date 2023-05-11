@@ -1,0 +1,74 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carouselContainer {
+  max-width: 100%;
+  padding: 0 150px;
+}
+
+.review {
+  min-height: 200px;
+}
+
+@media (min-width: 750px) and (max-width: 1250px) {
+  .carouselContainer {
+    padding: 0 50px;
+  }
+  .review {
+    min-height: 280px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 750px) {
+  .review {
+    min-height: 300px;
+  }
+}
+
+@media (min-width: 450px) and (max-width: 600px) {
+  .carouselContainer {
+    padding: 0 30px;
+  }
+
+  .review {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 450px) {
+  .carouselContainer {
+    padding: 0px;
+  }
+
+  .review {
+    min-height: 450px;
+  }
+}
+
+@media (min-width: 325px) and (max-width: 364px) {
+  .review {
+    min-height: 550px;
+  }
+}
+
+@media (max-width: 324px) {
+  .wrapper {
+    position: relative;
+    min-height: 670px;
+  }
+
+  .carouselContainer {
+    position: absolute;
+    top: 0;
+    left: -30px;
+
+    min-width: 100vw;
+  }
+
+  .review {
+    min-height: 620px;
+  }
+}

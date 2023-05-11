@@ -4,29 +4,41 @@
 
 .wrapper {
   background-color: var(--main-semi-transparent);
-  border-radius: 150px 150px 100px 100px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 120px;
+  border-bottom-right-radius: 120px;
   padding-bottom: 30px;
-  @media (max-width: 744px) {
-    border-radius: 50px;
+}
+
+@media (max-width: 650px) {
+  .wrapper {
+    border-radius: 100px;
+  }
+}
+
+@media (max-width: 375px) {
+  .wrapper {
+    border-radius: 65px;
   }
 }
 
 .heading {
-  padding-top: 10px;
-  margin-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 30px;
   text-align: center;
   font-size: xx-large;
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
 }
 
 .paragraf {
   margin-top: 15px;
   text-align: center;
+}
+
+@media (max-width: 324px) {
+  .paragraf {
+    font-size: small;
+  }
 }
 
 .link {

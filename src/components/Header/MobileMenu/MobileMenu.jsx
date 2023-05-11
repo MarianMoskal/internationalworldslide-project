@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import s from './MobileMenu.module.css';
 import close from '../../../images/close.svg';
+import { Trans } from 'react-i18next';
 
 export default function MobileMenu({
+  navigation,
   handleClick,
   showMobileMenu,
   languageSelect,
@@ -39,7 +41,11 @@ export default function MobileMenu({
   }, [showMobileMenu]);
 
   return (
-    <div ref={refOne} className={s.container + ' ' + mobileMenuVisibility}>
+    <div
+      ref={refOne}
+      id="menu"
+      className={s.container + ' ' + mobileMenuVisibility}
+    >
       <nav className={s.mobNav}>
         <div className={s.wrapper}>
           <button
@@ -53,38 +59,13 @@ export default function MobileMenu({
         </div>
 
         <ul className={s.mobList}>
-          <li>
-            <a onClick={handleClick} className={s.mobLink} href="services">
-              Услуги
-            </a>
-          </li>
-          <li>
-            <a
-              onClick={e => handleClick(e)}
-              className={s.mobLink}
-              href="languages"
-            >
-              Языки
-            </a>
-          </li>
-          <li>
-            <a
-              onClick={e => handleClick(e)}
-              className={s.mobLink}
-              href="reviews"
-            >
-              Отзывы
-            </a>
-          </li>
-          <li>
-            <a
-              onClick={e => handleClick(e)}
-              className={s.mobLink}
-              href="contacts"
-            >
-              Контакты
-            </a>
-          </li>
+          {navigation.map(i => (
+            <li key={i}>
+              <a onClick={handleClick} className={s.mobLink} href={i}>
+                <Trans i18nKey={i}></Trans>
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
       <a
@@ -93,8 +74,7 @@ export default function MobileMenu({
         target="blank"
         noreffer="noopener"
       >
-        {/* <img className={s.image} src={phone} alt="phone" /> */}
-        Узнать цену
+        <Trans i18nKey="message"></Trans>
       </a>
     </div>
   );

@@ -6,17 +6,25 @@
   background-color: var(--main-semi-transparent);
   border-top-left-radius: 100px;
   border-top-right-radius: 100px;
-  border-bottom-left-radius: 150px;
-  border-bottom-right-radius: 150px;
+  border-bottom-left-radius: 120px;
+  border-bottom-right-radius: 120px;
+}
 
-  @media (max-width: 744px) {
-    border-radius: 50px;
+@media (max-width: 650px) {
+  .container {
+    border-radius: 100px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    border-radius: 65px;
   }
 }
 
 .heading {
-  padding-top: 10px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 30px;
   text-align: center;
   font-size: xx-large;
 }

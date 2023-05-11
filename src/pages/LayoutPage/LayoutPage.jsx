@@ -13,6 +13,7 @@ export default function LayoutPage() {
         muted
         loop
         className={s.backgroundVideo}
+        playsInline
       ></video>
       <Header />
       <Outlet />
