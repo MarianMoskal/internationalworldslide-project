@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   padding: 5px 30px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .nav {
@@ -84,6 +84,15 @@
   @media (min-width: 840px) {
     margin-left: auto;
     display: none;
+  }
+}
+
+@media (max-width: 280px) {
+  .burgerButton {
+    margin: 0;
+  }
+  .header {
+    padding: 5px;
   }
 }
 

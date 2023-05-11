@@ -1,4 +1,4 @@
-import { Trans } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import s from './ServicesRange.module.css';
 import { services } from 'db/services';
 
@@ -16,11 +16,11 @@ const renderServices = services.map(({ title, item }) => (
 ));
 
 export default function ServicesRange() {
+  const { t } = useTranslation();
+
   return (
     <section className={s.section} id="services">
-      <h2 className={s.heading}>
-        <Trans i18nKey="services"></Trans>
-      </h2>
+      <h2 className={s.heading}>{t('services')}</h2>
       <div className={s.container}>{renderServices}</div>
     </section>
   );
