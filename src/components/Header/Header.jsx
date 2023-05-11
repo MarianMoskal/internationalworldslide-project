@@ -5,30 +5,10 @@ import menu from 'images/menu.svg';
 import { useEffect, useState } from 'react';
 import MobileMenu from './MobileMenu/MobileMenu';
 import { Trans, useTranslation } from 'react-i18next';
+import { transLangs } from 'db/languages';
 // import { changeLanguage } from 'i18next';
 
-function getWindowWidth() {
-  const { innerWidth: width } = window;
-
-  return {
-    width,
-  };
-}
-
-const languages = [
-  {
-    label: 'UA',
-    value: 'ua',
-  },
-  {
-    label: 'EN',
-    value: 'en',
-  },
-  {
-    label: 'ru',
-    value: 'ru',
-  },
-];
+const navigation = ['services', 'languages', 'reviews', 'contacts'];
 
 export default function Header() {
   const [displayStyle, setDisplayStyle] = useState('');
@@ -37,12 +17,12 @@ export default function Header() {
 
   const { i18n } = useTranslation();
   const changeLanguage = lng => {
-    console.log(lng);
     i18n.changeLanguage(lng);
   };
 
   useEffect(() => {
-    const width = getWindowWidth().width;
+    const width = window.innerWidth;
+
     if (width >= 839) {
       setDisplayStyle('desktop');
     }
@@ -58,7 +38,6 @@ export default function Header() {
   };
 
   const handleSelect = e => {
-    console.log(e.target.value);
     setLanguage(e.target.value);
     changeLanguage(e.target.value);
   };
@@ -70,7 +49,7 @@ export default function Header() {
       value={language}
       onChange={handleSelect}
     >
-      {languages.map(({ value, label }) => (
+      {transLangs.map(({ value, label }) => (
         <option className={optionClassName} key={label} value={value}>
           {label}
         </option>
@@ -86,26 +65,13 @@ export default function Header() {
           <>
             <nav className={s.nav}>
               <ul className={s.list}>
-                <li>
-                  <a onClick={handleClick} className={s.link} href="services">
-                    <Trans i18nKey="services"></Trans>
-                  </a>
-                </li>
-                <li>
-                  <a onClick={handleClick} className={s.link} href="languages">
-                    <Trans i18nKey="languages"></Trans>
-                  </a>
-                </li>
-                <li>
-                  <a onClick={handleClick} className={s.link} href="reviews">
-                    <Trans i18nKey="reviews"></Trans>
-                  </a>
-                </li>
-                <li>
-                  <a onClick={handleClick} className={s.link} href="contacts">
-                    <Trans i18nKey="contacts"></Trans>
-                  </a>
-                </li>
+                {navigation.map(i => (
+                  <li key={i}>
+                    <a onClick={handleClick} className={s.link} href={i}>
+                      <Trans i18nKey={i}></Trans>
+                    </a>
+                  </li>
+                ))}
               </ul>
             </nav>
             <a
@@ -129,6 +95,7 @@ export default function Header() {
               <img src={menu} alt="menu" width={40} />
             </button>
             <MobileMenu
+              navigation={navigation}
               handleClick={handleClick}
               showMobileMenu={showMobileMenu}
               languageSelect={languageSelect}

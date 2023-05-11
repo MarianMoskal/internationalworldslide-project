@@ -65,6 +65,17 @@
   list-style: square;
 }
 
+@media (max-width: 360px) {
+  .item {
+    font-size: smaller;
+    min-width: 75%;
+  }
+
+  .title {
+    font-size: medium;
+  }
+}
+
 .item:not(:last-child) {
   margin-bottom: 5px;
 }

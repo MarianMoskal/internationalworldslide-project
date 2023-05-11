@@ -104,6 +104,21 @@ export const languages = [
   { title: 'АЛБАНСКИЙ', picture: alb },
 ];
 
+export const transLangs = [
+  {
+    label: 'UA',
+    value: 'ua',
+  },
+  {
+    label: 'EN',
+    value: 'en',
+  },
+  {
+    label: 'ru',
+    value: 'ru',
+  },
+];
+
 // шотландский, валлийский, белорусский
 //Польский, словацкий, чешский
 

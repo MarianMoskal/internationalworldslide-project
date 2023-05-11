@@ -1,11 +1,13 @@
+import React, { useEffect, useState } from 'react';
 import Container from 'components/Main/Container/Container';
-import s from './Home.module.css';
 import ReactPlayer from 'react-player';
+
 import ServicesRange from './ServicesRange';
 import Languages from './Languages';
-import { useEffect, useState } from 'react';
 import Reviews from './Reviews/Reviews';
 import Contacts from './Contacts/Contacts';
+
+import s from './Home.module.css';
 
 export default function Home() {
   const [visibleStyle, setVisibleStyle] = useState('none');
@@ -28,19 +30,20 @@ export default function Home() {
   };
 
   return (
-    <main className={s.div}>
-      <div className={s.playerWrapper}>
+    <main>
+      <div className={s.playerWrapper} id="player">
         <ReactPlayer
           className={s.reactPlayer}
           url="https://vimeo.com/692650084"
-          // allow="autoplay"
-          // allowFullScreen={true}
+          allow={'autoplay'}
+          allowFullScreen={true}
           playsinline
           width="100%"
           height={playerHeight}
           muted={true}
           playing={true}
           controls={true}
+          quality="auto"
           onEnded={handlePauseEnd}
           onPlay={handlePlay}
           onPause={handlePauseEnd}

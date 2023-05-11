@@ -8,3 +8,12 @@
 .text {
   font-size: medium;
 }
+
+@media (max-width: 350px) {
+  .div {
+    font-size: large;
+  }
+  .text {
+    font-size: small;
+  }
+}

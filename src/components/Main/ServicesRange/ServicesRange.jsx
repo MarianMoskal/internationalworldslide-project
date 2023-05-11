@@ -1,5 +1,19 @@
 import { Trans } from 'react-i18next';
 import s from './ServicesRange.module.css';
+import { services } from 'db/services';
+
+const renderServices = services.map(({ title, item }) => (
+  <div key={title} className={s.wrapper}>
+    <h3 className={s.title}>{title}</h3>
+    <ul className={s.list}>
+      {item.map(i => (
+        <li key={i} className={s.item}>
+          {i}
+        </li>
+      ))}
+    </ul>
+  </div>
+));
 
 export default function ServicesRange() {
   return (
@@ -7,55 +21,7 @@ export default function ServicesRange() {
       <h2 className={s.heading}>
         <Trans i18nKey="services"></Trans>
       </h2>
-      <div className={s.container}>
-        <div className={s.wrapper}>
-          <h3 className={s.title}>ЯЗЫКИ</h3>
-          <ul className={s.list}>
-            <li className={s.item}>
-              Изучение иностранных языков индивидуально
-            </li>
-            <li className={s.item}>Изучение иностранных языков в группе</li>
-            <li className={s.item}>Изучение иностранных языков в дуэте</li>
-            <li className={s.item}>Курсы иностранных языков</li>
-          </ul>
-        </div>
-        <div className={s.wrapper}>
-          <h3 className={s.title}>ПЕРЕВОДЫ</h3>
-          <ul className={s.list}>
-            <li className={s.item}>
-              Письменный перевод с множества языков мира
-            </li>
-            <li className={s.item}>
-              Синхронный перевод с множества языков мира
-            </li>
-            <li className={s.item}>Перевод сайтов</li>
-            <li className={s.item}>Литературный перевод книг</li>
-          </ul>
-        </div>
-        <div className={s.wrapper}>
-          <h3 className={s.title}>ЛИНГВИСТИЧЕСКИЕ УСЛУГИ</h3>
-          <ul className={s.list}>
-            <li className={s.item}>
-              Составление CV, dossier, motivational & recommendation letter
-            </li>
-            <li className={s.item}>Выполнение заданий, связанных с языками</li>
-            <li className={s.item}>Проекты, научные работы, исследования</li>
-            <li className={s.item}>Выполнение тестов</li>
-            <li className={s.item}>Рефераты, курсовые, магистерские</li>
-          </ul>
-        </div>
-        <div className={s.wrapper}>
-          <h3 className={s.title}>ПОДГОТОВКА</h3>
-          <ul className={s.list}>
-            <li className={s.item}>Экзамены</li>
-            <li className={s.item}>Международные языковые сертификаты</li>
-            <li className={s.item}>Обучение и практика за границей</li>
-            <li className={s.item}>Поступление в иностранные ВУЗы</li>
-            <li className={s.item}>Собеседование в посольстве и консульстве</li>
-            <li className={s.item}>Получение гражданства</li>
-          </ul>
-        </div>
-      </div>
+      <div className={s.container}>{renderServices}</div>
     </section>
   );
 }

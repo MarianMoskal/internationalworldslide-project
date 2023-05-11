@@ -20,7 +20,7 @@
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 450px) {
   .container {
     width: 60%;
   }
