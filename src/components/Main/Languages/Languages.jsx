@@ -1,11 +1,14 @@
+import { useTranslation } from 'react-i18next';
 import s from './Languages.module.css';
 import { languages } from 'db/languages';
 
 export default function Languages() {
+  const { t } = useTranslation();
+
   return (
     <section id="languages" className={s.section}>
       <div className={s.container}>
-        <h2 className={s.heading}>Языки</h2>
+        <h2 className={s.heading}>{t('languages')}</h2>
         <div className={s.wrapper}>
           <ul className={s.list}>
             {languages.map(el => (

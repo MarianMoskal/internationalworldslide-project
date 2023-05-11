@@ -2,23 +2,20 @@ import Container from 'components/Main/Container';
 import logo from 'images/logo.svg';
 import s from './Header.module.css';
 import menu from 'images/menu.svg';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import MobileMenu from './MobileMenu/MobileMenu';
-import { Trans, useTranslation } from 'react-i18next';
+import { Trans } from 'react-i18next';
 import { transLangs } from 'db/languages';
-// import { changeLanguage } from 'i18next';
+import LocaleContext from 'LocaleContext';
+import i18n from 'i18n';
 
 const navigation = ['services', 'languages', 'reviews', 'contacts'];
 
 export default function Header() {
+  const { locale } = useContext(LocaleContext);
+
   const [displayStyle, setDisplayStyle] = useState('');
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const [language, setLanguage] = useState('ua');
-
-  const { i18n } = useTranslation();
-  const changeLanguage = lng => {
-    i18n.changeLanguage(lng);
-  };
 
   useEffect(() => {
     const width = window.innerWidth;
@@ -27,6 +24,12 @@ export default function Header() {
       setDisplayStyle('desktop');
     }
   }, []);
+
+  const changeLocale = l => {
+    if (locale !== l) {
+      i18n.changeLanguage(l);
+    }
+  };
 
   const handleClick = e => {
     e.preventDefault();
@@ -38,15 +41,14 @@ export default function Header() {
   };
 
   const handleSelect = e => {
-    setLanguage(e.target.value);
-    changeLanguage(e.target.value);
+    changeLocale(e.target.value);
   };
 
   const languageSelect = (selectClassName, optionClassName) => (
     <select
       className={selectClassName}
       name="langs"
-      value={language}
+      value={locale}
       onChange={handleSelect}
     >
       {transLangs.map(({ value, label }) => (

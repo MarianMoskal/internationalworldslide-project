@@ -1,63 +1,43 @@
 import React from 'react';
 import s from './Contacts.module.css';
-import telegram from 'images/telegram.svg';
-import viber from 'images/viber.svg';
-import whatsapp from 'images/whatsapp.svg';
-import facebook from 'images/facebook.svg';
+import { contacts } from 'db/contacts';
+import { useTranslation } from 'react-i18next';
+
+const renderContacts = contacts.map(({ title, href, icon }) => (
+  <div key={title} className={s.wrapper}>
+    <img className={s.image} src={icon} alt={title} width={50} />
+    <a className={s.link} href={href} target="_blank" rel="noreferrer">
+      {title}
+    </a>
+  </div>
+));
 
 export default function Contacts() {
+  const { t } = useTranslation();
+
   return (
     <section id="contacts" className={s.section}>
       <div className={s.background}>
-        <h2 className={s.heading}>Контакты</h2>
-        <div className={s.container}>
-          <div className={s.wrapperL}>
-            <img className={s.image} src={telegram} alt="telegram" width={50} />
+        <h2 className={s.heading}>{t('contacts')}</h2>
+        <div className={s.container}>{renderContacts}</div>
+        <div className={s.credentialsWrapper}>
+          <p className={s.credentials}>
+            <span>Email:</span>
+            <br />
             <a
-              className={s.link}
-              href="https://t.me/internationalworldslidecommunity"
-              target="_blank"
-              rel="noreferrer"
+              className={s.credentialsLink}
+              href="mailto:internationalworldslide@gmail.com"
             >
-              Telegram
+              internationalworldslide @gmail.com
             </a>
-          </div>
-          <div className={s.wrapperR}>
-            <img className={s.image} src={viber} alt="viber" width={50} />
-            <a
-              className={s.link}
-              href="https://invite.viber.com/?g2=AQBiac95mVKHN0uPWOY7Vuoq6i2%2Fn8lOrWxVulOp7MdPh6KWusMPBSH4zoPNObOo" //"https://viber.click/+4915236135107"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {' '}
-              <span className={s.viber}>Viber</span>
+          </p>
+          <p className={s.credentials}>
+            <span>Tel:</span>
+            <br />
+            <a className={s.credentialsLink} href="tel:+4915236135107">
+              +4915236135107
             </a>
-          </div>
-          <div className={s.wrapperL}>
-            <img className={s.image} src={whatsapp} alt="whatsapp" width={50} />
-            <a
-              className={s.link}
-              href="https://wa.me/+4915236135107"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {' '}
-              Whatsapp
-            </a>
-          </div>
-          <div className={s.wrapperR}>
-            <img className={s.image} src={facebook} alt="facebook" width={50} />
-            <a
-              className={s.link}
-              href="https://www.facebook.com/internationalworldslideiwl/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {' '}
-              Facebook
-            </a>
-          </div>
+          </p>
         </div>
       </div>
     </section>
