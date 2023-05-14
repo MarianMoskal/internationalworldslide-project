@@ -48,7 +48,7 @@ export default function Header() {
     <select
       className={selectClassName}
       name="langs"
-      value={locale}
+      value={i18n.language}
       onChange={handleSelect}
     >
       {transLangs.map(({ value, label }) => (
