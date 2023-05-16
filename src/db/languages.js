@@ -106,8 +106,8 @@ export const languages = [
 
 export const transLangs = [
   {
-    label: 'UA',
-    value: 'ua',
+    label: 'UK',
+    value: 'uk',
   },
   {
     label: 'EN',

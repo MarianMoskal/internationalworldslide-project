@@ -25,7 +25,7 @@
 
 @media (max-width: 450px) {
   .heroButton {
-    transform: translate(-50%, 80px);
+    transform: translate(-50%, 140px);
   }
 }
 

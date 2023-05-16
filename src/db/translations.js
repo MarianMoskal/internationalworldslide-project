@@ -1,4 +1,4 @@
-export const ua = {
+export const uk = {
   translations: {
     services: 'Послуги',
     languages: 'Мови',

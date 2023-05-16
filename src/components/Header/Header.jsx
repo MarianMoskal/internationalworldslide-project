@@ -31,6 +31,15 @@ export default function Header() {
     }
   };
 
+  useEffect(() => {
+    console.log('go');
+    if (i18n.language === 'uk' || i18n.language === 'ru') {
+      return;
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }, []);
+
   const handleClick = e => {
     e.preventDefault();
 
