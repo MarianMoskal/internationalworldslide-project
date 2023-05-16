@@ -1,7 +1,7 @@
 import React from 'react';
 
 const defaultValue = {
-  locale: 'ua',
+  locale: 'uk',
   setLocale: () => {},
 };
 

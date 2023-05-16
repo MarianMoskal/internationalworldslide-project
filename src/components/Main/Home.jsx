@@ -8,6 +8,7 @@ import Reviews from './Reviews/Reviews';
 import Contacts from './Contacts/Contacts';
 
 import s from './Home.module.css';
+import { Trans } from 'react-i18next';
 
 export default function Home() {
   const [visibleStyle, setVisibleStyle] = useState('none');
@@ -64,8 +65,7 @@ export default function Home() {
             target="blank"
             noreffer="noopener"
           >
-            {' '}
-            Узнать цену
+            <Trans i18nKey="message"></Trans>
           </a>
         </button>
       </div>
